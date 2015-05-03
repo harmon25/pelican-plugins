@@ -43,6 +43,8 @@ def share_post(content):
     facebook_link = 'http://www.facebook.com/sharer/sharer.php?s=100&amp;p%%5Burl%%5D=%s' % url
     gplus_link = 'https://plus.google.com/share?url=%s' % url
     twitter_link = 'http://twitter.com/home?status=%s' % tweet
+    reddit_link = 'https://www.reddit.com/submit?url=%s' % url
+    pinterest_link = 'http://pinterest.com/pin/create/button/?url=%s' % url
     mail_link = 'mailto:?subject=%s&amp;body=%s' % (title, url)
 
     share_links = {
@@ -50,6 +52,8 @@ def share_post(content):
                    'twitter': twitter_link,
                    'facebook': facebook_link,
                    'google-plus': gplus_link,
+                   'reddit': reddit_link,
+                   'pinterest': pinterest_link,
                    'email': mail_link
                    }
     content.share_post = share_links
